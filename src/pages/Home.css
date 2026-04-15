@@ -204,17 +204,23 @@
 
 /* Card text */
 .card-title {
-  font-family: var(--font-headline);
-  font-size: 1.15rem;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
   font-weight: 700;
   color: white;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
 }
 
 .card-tagline {
-  font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.45);
   font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.2px;
+  line-height: 1.4;
 }
 
 /* ========================
@@ -237,6 +243,14 @@
 
 .card-chess .card-title {
   font-family: var(--font-serif);
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+}
+
+.card-chess .card-tagline {
+  font-family: var(--font-serif);
+  font-style: italic;
 }
 
 /* Ukulele: wavy bottom shape */
@@ -276,7 +290,17 @@
 }
 
 .card-coding .card-title {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  letter-spacing: -0.5px;
   text-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
+}
+
+.card-coding .card-tagline {
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-size: 0.65rem;
+  letter-spacing: 0;
 }
 
 /* Piano: subtle key reflection */
@@ -330,6 +354,21 @@
   );
 }
 
+/* Story Writing: card typography */
+.card-story-writing .card-title {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.2rem;
+  letter-spacing: 0;
+}
+
+.card-story-writing .card-tagline {
+  font-family: var(--font-hand);
+  font-style: normal;
+  font-size: 0.9rem;
+  opacity: 0.55;
+}
+
 /* Story Writing: page curl hint */
 .card-story-writing::before {
   content: "";
@@ -357,5 +396,71 @@
 }
 
 .card-typing .card-title {
-  font-family: monospace;
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.card-typing .card-tagline {
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-size: 0.65rem;
+}
+
+/* Piano: elegant serif */
+.card-piano .card-title {
+  font-family: var(--font-serif);
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+.card-piano .card-tagline {
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+/* Toki Pona: friendly rounded */
+.card-toki-pona .card-title {
+  font-family: var(--font-headline);
+  font-weight: 800;
+  letter-spacing: -1px;
+  font-size: 1.2rem;
+}
+
+/* Spanish: warm serif */
+.card-spanish .card-title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 0;
+}
+
+.card-spanish .card-tagline {
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+/* Soroban: clean geometric */
+.card-soroban .card-title {
+  font-family: var(--font-display);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+/* Korean: soft + round */
+.card-korean .card-title {
+  font-family: var(--font-headline);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+/* Ukulele: bouncy hand-drawn tagline */
+.card-ukulele .card-tagline {
+  font-family: var(--font-hand);
+  font-style: normal;
+  font-size: 0.9rem;
+  opacity: 0.55;
 }

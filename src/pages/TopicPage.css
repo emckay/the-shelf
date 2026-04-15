@@ -23,9 +23,10 @@
   align-items: center;
   gap: 8px;
   color: var(--topic-text);
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
   padding: 10px 20px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.1);
@@ -53,12 +54,13 @@
 }
 
 .topic-title {
-  font-size: 5rem;
-  font-weight: 800;
+  font-family: var(--font-display);
+  font-size: 5.5rem;
+  font-weight: 700;
   color: var(--topic-text);
   margin-bottom: 8px;
-  letter-spacing: -2px;
-  line-height: 1;
+  letter-spacing: -3px;
+  line-height: 0.95;
 }
 
 .topic-subtitle-hangul {
@@ -80,12 +82,14 @@
 }
 
 .topic-description {
-  font-size: 1.2rem;
-  line-height: 1.7;
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  line-height: 1.8;
   color: var(--topic-text);
-  opacity: 0.85;
-  max-width: 650px;
-  margin: 16px auto 0;
+  opacity: 0.75;
+  max-width: 580px;
+  margin: 20px auto 0;
+  letter-spacing: 0.1px;
 }
 
 /* Video Section */
@@ -222,10 +226,17 @@
   border-width: 0 3px 3px 0;
 }
 
-/* Chess: use serif font for title */
+/* Chess: old-world editorial serif */
 .topic-chess .topic-title {
   font-family: var(--font-serif);
-  letter-spacing: 0;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+}
+
+.topic-chess .topic-description {
+  font-family: var(--font-serif);
 }
 
 /* ========================
@@ -305,9 +316,13 @@
   50% { transform: scaleY(1.5); }
 }
 
-/* Ukulele: warm text shadow */
+/* Ukulele: bouncy hand-drawn feel */
 .topic-ukulele .topic-title {
-  text-shadow: 2px 2px 0 rgba(255, 230, 109, 0.3);
+  font-family: var(--font-hand);
+  font-size: 7rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-shadow: 3px 3px 0 rgba(255, 230, 109, 0.3);
 }
 
 /* ========================
@@ -480,9 +495,23 @@
   50% { opacity: 0.8; }
 }
 
-/* Coding: use monospace subtitle, neon title glow */
+/* Coding: monospace with neon glow */
 .topic-coding .topic-title {
+  font-family: var(--font-mono);
+  font-size: 4.5rem;
+  font-weight: 700;
+  letter-spacing: -2px;
   text-shadow: 0 0 40px rgba(59, 130, 246, 0.3), 0 0 80px rgba(59, 130, 246, 0.1);
+}
+
+.topic-coding .topic-description {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.topic-coding .topic-subtitle-code {
+  font-family: var(--font-mono);
 }
 
 /* ========================
@@ -522,7 +551,15 @@
 
 .topic-piano .topic-title {
   font-family: var(--font-serif);
-  letter-spacing: 2px;
+  font-weight: 800;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+
+.topic-piano .topic-description {
+  font-family: var(--font-serif);
+  font-style: italic;
 }
 
 /* ========================
@@ -564,13 +601,19 @@
   border-radius: 50%;
 }
 
+.topic-toki-pona .topic-title {
+  font-family: var(--font-headline);
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
 .topic-subtitle-tp {
   display: block;
-  font-size: 1.3rem;
+  font-family: var(--font-hand);
+  font-size: 1.8rem;
   color: var(--topic-text);
   opacity: 0.5;
   margin-bottom: 16px;
-  font-style: italic;
 }
 
 /* ========================
@@ -614,12 +657,19 @@
   border-radius: 50%;
 }
 
+.topic-spanish .topic-title {
+  font-family: var(--font-serif);
+  font-weight: 800;
+  font-size: 5.5rem;
+  letter-spacing: -1px;
+}
+
 .topic-subtitle-spanish {
   display: block;
   font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: var(--topic-text);
-  opacity: 0.5;
+  opacity: 0.45;
   margin-bottom: 16px;
   font-style: italic;
 }
@@ -645,12 +695,21 @@
   user-select: none;
 }
 
+.topic-soroban .topic-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+
 .topic-subtitle-soroban {
   display: block;
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: var(--topic-text);
-  opacity: 0.5;
+  opacity: 0.4;
   margin-bottom: 16px;
+  letter-spacing: 4px;
 }
 
 /* ========================
@@ -685,9 +744,16 @@
 }
 
 .topic-story-writing .topic-title {
+  font-family: var(--font-hand);
+  font-size: 7rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  font-style: normal;
+}
+
+.topic-story-writing .topic-description {
   font-family: var(--font-serif);
   font-style: italic;
-  letter-spacing: 0;
 }
 
 /* ========================
@@ -746,8 +812,16 @@
 }
 
 .topic-typing .topic-title {
-  font-family: monospace;
-  letter-spacing: 2px;
+  font-family: var(--font-mono);
+  font-size: 4.5rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.topic-typing .topic-description {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  line-height: 1.9;
 }
 
 /* ========================
@@ -756,6 +830,7 @@
 @media (max-width: 768px) {
   .topic-title {
     font-size: 3rem !important;
+    letter-spacing: -1px !important;
   }
 
   .topic-description {
