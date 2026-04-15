@@ -59,9 +59,9 @@ export const topics: Topic[] = [
     title: "Piano",
     tagline: "Play beautiful melodies",
     description:
-      "Sit down at the keys and discover the joy of piano! Learn notes, scales, and simple songs that will have you playing real music in no time.",
+      "Master the ivory keys, learn to read music, master scales, and play your favorite classical and modern pieces with precision and soul.",
     accentColor: "#1a1a2e",
-    bgGradient: "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)",
+    bgGradient: "linear-gradient(135deg, #0f1118 0%, #1a1a2e 40%, #0f3460 100%)",
     textColor: "#e8e8f0",
     videoUrl: "",
   },
@@ -81,10 +81,10 @@ export const topics: Topic[] = [
     title: "Spanish",
     tagline: "Speak with the world",
     description:
-      "Join 500 million Spanish speakers around the globe! Learn everyday phrases, fun vocabulary, and the rhythm of one of the world's most spoken languages.",
+      "Join 500 million speakers and discover the vibrant soul of the Spanish-speaking world. From the streets of Madrid to the mountains of the Andes, your journey starts here.",
     accentColor: "#DC2626",
-    bgGradient: "linear-gradient(135deg, #DC2626 0%, #ef4444 50%, #f97316 100%)",
-    textColor: "#fff1f2",
+    bgGradient: "linear-gradient(135deg, #fdf2e9 0%, #f5dcc4 50%, #e8c9a4 100%)",
+    textColor: "#6b2113",
     videoUrl: "",
   },
   {
@@ -92,10 +92,10 @@ export const topics: Topic[] = [
     title: "Soroban",
     tagline: "Calculate at lightning speed",
     description:
-      "Master the Japanese abacus and unlock mental math superpowers! Soroban trains your brain to visualize numbers and calculate faster than a calculator.",
+      "A digital instrument of mastery. Transpose ancient tactile precision into modern cognitive speed. Experience the art of calculation through geometric harmony.",
     accentColor: "#92400e",
-    bgGradient: "linear-gradient(135deg, #92400e 0%, #b45309 50%, #78350f 100%)",
-    textColor: "#fef3c7",
+    bgGradient: "linear-gradient(135deg, #faf6f0 0%, #f5ede0 50%, #ebe0cc 100%)",
+    textColor: "#3d2800",
     videoUrl: "",
   },
   {

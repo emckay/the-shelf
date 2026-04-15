@@ -546,20 +546,26 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: rgba(232, 232, 240, 0.04);
+  background: rgba(201, 168, 76, 0.06);
 }
 
 .topic-piano .topic-title {
   font-family: var(--font-serif);
   font-weight: 800;
-  letter-spacing: 6px;
+  letter-spacing: 8px;
   text-transform: uppercase;
-  font-size: 4rem;
+  font-size: 4.5rem;
+  color: #c9a84c;
 }
 
 .topic-piano .topic-description {
   font-family: var(--font-serif);
   font-style: italic;
+  color: rgba(232, 232, 240, 0.65);
+}
+
+.topic-piano .back-button {
+  color: rgba(201, 168, 76, 0.7);
 }
 
 /* ========================
@@ -626,8 +632,8 @@
     -45deg,
     transparent,
     transparent 30px,
-    rgba(255, 255, 255, 0.02) 30px,
-    rgba(255, 255, 255, 0.02) 32px
+    rgba(160, 48, 32, 0.025) 30px,
+    rgba(160, 48, 32, 0.025) 32px
   );
 }
 
@@ -636,7 +642,7 @@
   font-family: var(--font-serif);
   font-size: 3rem;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.06);
+  color: rgba(160, 48, 32, 0.06);
   animation: code-drift 10s ease-in-out infinite;
   user-select: none;
 }
@@ -653,7 +659,7 @@
   left: -10%;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(249, 115, 22, 0.08) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(220, 38, 38, 0.06) 0%, transparent 60%);
   border-radius: 50%;
 }
 
@@ -662,16 +668,26 @@
   font-weight: 800;
   font-size: 5.5rem;
   letter-spacing: -1px;
+  color: #a03020;
 }
 
 .topic-subtitle-spanish {
   display: block;
-  font-family: var(--font-serif);
-  font-size: 1.6rem;
+  font-family: var(--font-hand);
+  font-size: 2rem;
   color: var(--topic-text);
-  opacity: 0.45;
+  opacity: 0.5;
   margin-bottom: 16px;
-  font-style: italic;
+}
+
+.topic-spanish .back-button {
+  color: #a03020;
+  background: rgba(160, 48, 32, 0.08);
+}
+
+.topic-spanish .video-container {
+  border-color: rgba(160, 48, 32, 0.15);
+  background: rgba(160, 48, 32, 0.05);
 }
 
 /* ========================
@@ -690,7 +706,7 @@
   right: 5%;
   font-size: 18rem;
   font-weight: 900;
-  color: rgba(254, 243, 199, 0.03);
+  color: rgba(146, 64, 14, 0.04);
   line-height: 1;
   user-select: none;
 }
@@ -698,18 +714,34 @@
 .topic-soroban .topic-title {
   font-family: var(--font-display);
   font-weight: 700;
-  letter-spacing: 4px;
+  letter-spacing: 6px;
   text-transform: uppercase;
-  font-size: 4rem;
+  font-size: 4.5rem;
+  color: #6b3a00;
 }
 
 .topic-subtitle-soroban {
   display: block;
-  font-size: 2.2rem;
-  color: var(--topic-text);
+  font-size: 2rem;
+  color: #92400e;
   opacity: 0.4;
   margin-bottom: 16px;
-  letter-spacing: 4px;
+  letter-spacing: 6px;
+}
+
+.topic-soroban .back-button {
+  color: #6b3a00;
+  background: rgba(146, 64, 14, 0.06);
+}
+
+.topic-soroban .video-container {
+  border-color: rgba(146, 64, 14, 0.12);
+  background: rgba(146, 64, 14, 0.04);
+}
+
+.topic-soroban .topic-description {
+  color: #5c3200;
+  opacity: 0.7;
 }
 
 /* ========================
