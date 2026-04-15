@@ -389,14 +389,14 @@ export default function TopicPage() {
   const topicIndex = topics.findIndex((t) => t.slug === slug);
   const topic = topicIndex >= 0 ? topics[topicIndex] : undefined;
 
-  const prevTopic = topicIndex > 0 ? topics[topicIndex - 1] : null;
-  const nextTopic = topicIndex < topics.length - 1 ? topics[topicIndex + 1] : null;
+  const prevTopic = topics[(topicIndex - 1 + topics.length) % topics.length];
+  const nextTopic = topics[(topicIndex + 1) % topics.length];
 
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
-      if (e.key === "ArrowLeft" && prevTopic) {
+      if (e.key === "ArrowLeft") {
         navigate(`/topic/${prevTopic.slug}`);
-      } else if (e.key === "ArrowRight" && nextTopic) {
+      } else if (e.key === "ArrowRight") {
         navigate(`/topic/${nextTopic.slug}`);
       }
     },
@@ -484,22 +484,18 @@ export default function TopicPage() {
       </div>
 
       <nav className="topic-pager">
-        {prevTopic ? (
-          <Link to={`/topic/${prevTopic.slug}`} className="pager-link pager-prev">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-              <path d="M15 18l-6-6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            <span>{prevTopic.title}</span>
-          </Link>
-        ) : <span />}
-        {nextTopic ? (
-          <Link to={`/topic/${nextTopic.slug}`} className="pager-link pager-next">
-            <span>{nextTopic.title}</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-              <path d="M9 18l6-6-6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </Link>
-        ) : <span />}
+        <Link to={`/topic/${prevTopic.slug}`} className="pager-link pager-prev">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M15 18l-6-6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          <span>{prevTopic.title}</span>
+        </Link>
+        <Link to={`/topic/${nextTopic.slug}`} className="pager-link pager-next">
+          <span>{nextTopic.title}</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M9 18l6-6-6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </Link>
       </nav>
     </div>
   );
