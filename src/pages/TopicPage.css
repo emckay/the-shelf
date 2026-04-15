@@ -43,19 +43,27 @@
 .topic-content {
   position: relative;
   z-index: 5;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 32px 80px;
+  padding: 0 48px 80px;
 }
 
-.topic-header {
-  text-align: center;
-  margin-bottom: 48px;
+/* Side-by-side hero */
+.topic-hero {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 48px;
+  align-items: center;
+  min-height: calc(100vh - 160px);
+}
+
+.hero-text {
+  text-align: left;
 }
 
 .topic-title {
   font-family: var(--font-display);
-  font-size: 5.5rem;
+  font-size: 5rem;
   font-weight: 700;
   color: var(--topic-text);
   margin-bottom: 8px;
@@ -63,50 +71,52 @@
   line-height: 0.95;
 }
 
-.topic-subtitle-hangul {
+.topic-subtitle {
   display: block;
-  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.topic-subtitle-hangul {
+  font-size: 2.2rem;
   color: var(--topic-text);
-  opacity: 0.6;
-  margin-bottom: 16px;
+  opacity: 0.5;
   font-weight: 400;
 }
 
 .topic-subtitle-code {
-  display: block;
-  font-family: "Courier New", monospace;
-  font-size: 2rem;
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
   color: #10B981;
-  opacity: 0.7;
-  margin-bottom: 16px;
+  opacity: 0.6;
+  display: none; /* title already has brackets */
 }
 
 .topic-description {
   font-family: var(--font-body);
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   line-height: 1.8;
   color: var(--topic-text);
-  opacity: 0.75;
-  max-width: 580px;
-  margin: 20px auto 0;
+  opacity: 0.7;
+  max-width: 480px;
+  margin-top: 20px;
   letter-spacing: 0.1px;
 }
 
-/* Video Section */
-.video-section {
-  margin-top: 24px;
+/* Video */
+.hero-video {
+  position: relative;
 }
 
 .video-container {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 */
+  padding-top: 62%;
   border-radius: 16px;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.3);
 }
 
 .video-container iframe {
@@ -124,10 +134,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
   color: var(--topic-text);
-  opacity: 0.5;
-  font-size: 1rem;
+  opacity: 0.4;
+  font-size: 0.85rem;
   font-weight: 500;
 }
 
@@ -138,6 +148,26 @@
   align-items: center;
   justify-content: center;
   gap: 16px;
+  color: white;
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 800px) {
+  .topic-hero {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    min-height: auto;
+    padding-top: 16px;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .topic-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* Decorations shared */
@@ -257,7 +287,7 @@
 
 .music-note {
   position: absolute;
-  color: rgba(255, 107, 53, 0.2);
+  color: rgba(160, 64, 10, 0.12);
   animation: bounce-note 6s ease-in-out infinite;
 }
 
@@ -300,7 +330,7 @@
 .sound-waves span {
   display: block;
   width: 4px;
-  background: rgba(255, 107, 53, 0.15);
+  background: rgba(160, 64, 10, 0.1);
   border-radius: 4px;
   animation: sound-wave 1.5s ease-in-out infinite;
 }
@@ -316,13 +346,28 @@
   50% { transform: scaleY(1.5); }
 }
 
-/* Ukulele: bouncy hand-drawn feel */
+/* Ukulele: bouncy hand-drawn feel on warm cream bg */
 .topic-ukulele .topic-title {
   font-family: var(--font-hand);
-  font-size: 7rem;
+  font-size: 6rem;
   font-weight: 700;
   letter-spacing: 0;
-  text-shadow: 3px 3px 0 rgba(255, 230, 109, 0.3);
+  color: #a0400a;
+}
+
+.topic-ukulele .back-button {
+  color: #a0400a;
+  background: rgba(255, 107, 53, 0.08);
+}
+
+.topic-ukulele .video-container {
+  border-color: rgba(255, 107, 53, 0.12);
+  background: rgba(255, 107, 53, 0.04);
+  box-shadow: 0 20px 50px -15px rgba(160, 64, 10, 0.1);
+}
+
+.topic-ukulele .video-placeholder {
+  color: #a0400a;
 }
 
 /* ========================
@@ -332,9 +377,28 @@
   position: absolute;
   font-size: 20rem;
   font-weight: 800;
-  color: rgba(200, 50, 80, 0.04);
+  color: rgba(160, 50, 80, 0.04);
   line-height: 1;
   user-select: none;
+}
+
+.topic-korean .back-button {
+  color: #7a2045;
+  background: rgba(160, 50, 80, 0.06);
+}
+
+.topic-korean .video-container {
+  border-color: rgba(160, 50, 80, 0.1);
+  background: rgba(160, 50, 80, 0.03);
+  box-shadow: 0 20px 50px -15px rgba(160, 50, 80, 0.1);
+}
+
+.topic-korean .video-placeholder {
+  color: #7a2045;
+}
+
+.topic-korean .topic-title {
+  color: #6b1535;
 }
 
 .hangul-watermark:first-child {
@@ -611,15 +675,29 @@
   font-family: var(--font-headline);
   font-weight: 800;
   letter-spacing: -2px;
+  color: #78350f;
 }
 
 .topic-subtitle-tp {
-  display: block;
   font-family: var(--font-hand);
   font-size: 1.8rem;
-  color: var(--topic-text);
+  color: #92400e;
   opacity: 0.5;
-  margin-bottom: 16px;
+}
+
+.topic-toki-pona .back-button {
+  color: #78350f;
+  background: rgba(251, 191, 36, 0.12);
+}
+
+.topic-toki-pona .video-container {
+  border-color: rgba(251, 191, 36, 0.2);
+  background: rgba(251, 191, 36, 0.06);
+  box-shadow: 0 20px 50px -15px rgba(120, 53, 15, 0.1);
+}
+
+.topic-toki-pona .video-placeholder {
+  color: #78350f;
 }
 
 /* ========================
@@ -686,8 +764,13 @@
 }
 
 .topic-spanish .video-container {
-  border-color: rgba(160, 48, 32, 0.15);
-  background: rgba(160, 48, 32, 0.05);
+  border-color: rgba(160, 48, 32, 0.12);
+  background: rgba(160, 48, 32, 0.04);
+  box-shadow: 0 20px 50px -15px rgba(160, 48, 32, 0.15);
+}
+
+.topic-spanish .video-placeholder {
+  color: #a03020;
 }
 
 /* ========================
@@ -737,6 +820,11 @@
 .topic-soroban .video-container {
   border-color: rgba(146, 64, 14, 0.12);
   background: rgba(146, 64, 14, 0.04);
+  box-shadow: 0 20px 50px -15px rgba(146, 64, 14, 0.12);
+}
+
+.topic-soroban .video-placeholder {
+  color: #6b3a00;
 }
 
 .topic-soroban .topic-description {
@@ -859,14 +947,14 @@
 /* ========================
    RESPONSIVE
    ======================== */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .topic-title {
     font-size: 3rem !important;
     letter-spacing: -1px !important;
   }
 
   .topic-description {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .topic-nav {

@@ -26,10 +26,10 @@ export const topics: Topic[] = [
     title: "Ukulele",
     tagline: "Strum your way to fun",
     description:
-      "Pick up the ukulele and start making music right away! Learn chords, strumming patterns, and your favorite songs in a fun, relaxed island style.",
+      "Strum with the tide. Master chords, learn vibrant patterns, and play your favorite songs in a fun, relaxed island style designed for your rhythm.",
     accentColor: "#FF6B35",
-    bgGradient: "linear-gradient(135deg, #FF6B35 0%, #ff8f5e 50%, #FFE66D 100%)",
-    textColor: "#3d1600",
+    bgGradient: "linear-gradient(135deg, #fdf6f0 0%, #f5ebe0 50%, #ede0d0 100%)",
+    textColor: "#5c2d10",
     videoUrl: "",
   },
   {
@@ -39,8 +39,8 @@ export const topics: Topic[] = [
     description:
       "Discover the beautiful Korean language! Learn Hangul, everyday phrases, and fun expressions. Open the door to K-pop, Korean food, and a rich culture.",
     accentColor: "#E8A0BF",
-    bgGradient: "linear-gradient(135deg, #E8A0BF 0%, #f0c4d8 50%, #fff0f5 100%)",
-    textColor: "#4a1030",
+    bgGradient: "linear-gradient(135deg, #fdf0f5 0%, #f5e4ec 50%, #ede0e8 100%)",
+    textColor: "#5c2040",
     videoUrl: "",
   },
   {
@@ -70,9 +70,9 @@ export const topics: Topic[] = [
     title: "Toki Pona",
     tagline: "The language of good",
     description:
-      "Learn the world's smallest language! With only 137 words, Toki Pona teaches you to express big ideas simply. It's a fun puzzle for your brain.",
+      "Discover the world's most minimal and positive language, built with only 137 words to help you focus on the good things in life.",
     accentColor: "#FBBF24",
-    bgGradient: "linear-gradient(135deg, #FBBF24 0%, #f59e0b 50%, #d97706 100%)",
+    bgGradient: "linear-gradient(135deg, #fefce8 0%, #fef9c3 50%, #fef3c7 100%)",
     textColor: "#451a03",
     videoUrl: "",
   },
